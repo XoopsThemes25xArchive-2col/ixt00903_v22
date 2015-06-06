@@ -1,0 +1,88 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt00903
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt00903
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: control2.html 1923 2009-12-20 15:51:22Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<style>
+ .ixt-ctrl2-left, .ixt-ctrl2-right { position:absolute; width:100px; cursor:pointer; z-index:2; filter: alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;}
+ .ixt-ctrl2-left { left:-34px; text-align:left; }
+ .ixt-ctrl2-right { right:-34px; text-align:right; }
+</style>
+
+<script type="text/javascript">
+/* start show/hide footer */
+	function ixtToggleFooter( )
+		{
+			var id1 = 'ixt-Footer';
+			var ctrltext = document.getElementById(id1+'-ctrl');
+ 		var rctrltext = document.getElementById(id1+'-rctrl');
+   var value = (document.getElementById(id1).style.display == 'none') ? 'block' : 'none';
+			if (value == 'none')
+			{
+    ctrltext.value = 'show';
+    rctrltext.value = 'show';
+   } else {
+    ctrltext.value = 'hide';
+    rctrltext.value = 'hide';
+			}
+	 	ixtSetSidebar( id1, value );
+   ixtSetCookie( id1, value );
+		}
+
+ function ixtSetSidebar( id, value )
+		{
+		 document.getElementById(id).style.display = value;
+		}
+
+ function ixtTrim( str )
+		{
+   return str.replace(/^\s+|\s+$/g, '') ;
+		}
+
+ function ixtGetCookie( name )
+  {
+			var cookieName = 'ixt_' + name;
+			var cookie = document.cookie;
+			var cookieList = cookie.split( ";" );
+			for( var idx in cookieList )
+				{
+					cookie = cookieList[idx].split( "=" );
+					if ( ixtTrim( cookie[0] ) == cookieName )
+						{
+							return( cookie[1] );
+						}
+				}
+		 return 'none';
+		}
+		
+	function ixtSetCookie( name, value )
+		{
+			var cookieName = 'ixt_' + name;
+			var expires = new Date();
+			expires.setTime( expires.getTime() + (365 * 24 * 60 * 60 * 1000));
+			document.cookie = cookieName + "=" + value + "; expires=" + expires + ";";
+  }
+/* end show/hide footer */
+</script>
+
+<div class="ixt-nav">
+   <div class="ixt-ctrl2-left">
+    <span class="ixt-button-wrapper">
+     <span class="l"></span><span class="r"></span>
+     <input name="ixt-Footer-ctrl" id="ixt-Footer-ctrl" type="submit" class="ixt-button" onclick='ixtToggleFooter();' value='hide' />
+    </span>
+   </div>
+   <div class="ixt-ctrl2-right">
+    <span class="ixt-button-wrapper">
+     <span class="l"></span><span class="r"></span>
+     <input name="ixt-Footer-rctrl" id="ixt-Footer-rctrl" type="submit" class="ixt-button" onclick='ixtToggleFooter();' value='hide' />
+    </span>
+   </div>
+</div>

@@ -1,0 +1,77 @@
+/*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt00903
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt00903
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: style.ie7.css 1739 2009-12-09 19:54:53Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*/
+/* begin Box, Sheet */
+.ixt-Sheet-tl { clip: rect(auto 74px 74px auto); }
+.ixt-Sheet-tr { clip: rect(auto auto 74px 74px); }
+.ixt-Sheet-bl { clip: rect(74px 74px auto auto); }
+.ixt-Sheet-br { clip: rect(74px auto auto 74px); }
+.ixt-Sheet-tc { clip: rect(auto auto 74px auto); }
+.ixt-Sheet-bc { clip: rect(74px auto auto auto); }
+.ixt-Sheet-cr { clip: rect(auto auto auto 74px); }
+.ixt-Sheet-cl { clip: rect(auto 74px auto auto); }
+.ixt-Sheet-body { zoom: 1; }
+/* end Box, Sheet */
+
+/* begin Menu */
+.ixt-nav .r { clip: rect(auto auto auto 936px); }
+/* end Menu */
+
+/* begin MenuItem */
+.ixt-menu a .r { clip: rect(auto auto auto 400px); }
+/* end MenuItem */
+
+/* begin Box, Block */
+.ixt-Block-body { zoom: 1; }
+.ixt-Block1-body { zoom: 1; }
+.ixt-Block2-body { zoom: 1; }
+.ixt-Block3-body { zoom: 1; }
+.ixt-Block4-body { zoom: 1; }
+.ixt-Block5-body { zoom: 1; }
+.ixt-Block6-body { zoom: 1; }
+.ixt-Block7-body { zoom: 1; }
+.ixt-Block8-body { zoom: 1; }
+.ixt-Block9-body { zoom: 1; }
+.ixt-Block10-body { zoom: 1; }
+.ixt-Block11-body { zoom: 1; }
+.ixt-Block12-body { zoom: 1; }
+.ixt-Block999-body { zoom: 1; }
+/* end Box, Block */
+
+/* begin Box, BlockContent */
+.ixt-BlockContent-body { zoom: 1; }
+.ixt-BlockContent1-body { zoom: 1; }
+.ixt-BlockContent2-body { zoom: 1; }
+.ixt-BlockContent3-body { zoom: 1; }
+.ixt-BlockContent4-body { zoom: 1; }
+.ixt-BlockContent5-body { zoom: 1; }
+.ixt-BlockContent6-body { zoom: 1; }
+.ixt-BlockContent7-body { zoom: 1; }
+.ixt-BlockContent8-body { zoom: 1; }
+.ixt-BlockContent9-body { zoom: 1; }
+.ixt-BlockContent10-body { zoom: 1; }
+.ixt-BlockContent11-body { zoom: 1; }
+.ixt-BlockContent12-body { zoom: 1; }
+.ixt-BlockContent999-body { zoom: 1; }
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.ixt-Post-body { zoom: 1; }
+/* end Box, Post */
+
+/* begin PostContent */
+.ixt-PostContent { height:1%; }
+/* end PostContent */
+
+/* begin Button */
+.ixt-button-wrapper .r { clip: rect(auto auto auto 408px); }
+/* end Button */

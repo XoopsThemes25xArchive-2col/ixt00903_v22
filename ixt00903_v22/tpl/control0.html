@@ -1,0 +1,123 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt00903
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt00903
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: control0.html 1923 2009-12-20 15:51:22Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<style>
+ .ixt-ctrl0-left, .ixt-ctrl0-right { position:absolute; width:100px; cursor:pointer; z-index:2; filter: alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;}
+ .ixt-ctrl0-left { left:-34px; text-align:left; }
+ .ixt-ctrl0-right { right:-34px; text-align:right; }
+</style>
+
+<script type="text/javascript">
+/* start show/hide sidebar */
+	function ixtToggleSidebar( id )
+		{
+			var id0 = 'ixt-content';
+			var id1 = (id == '1') ? 'ixt-sidebar1' : 'ixt-sidebar2';
+			var id2 = (id == '1') ? 'ixt-sidebar2' : 'ixt-sidebar1';
+			var w0 = '748px';
+			var w1 = '748px';
+			var w2 = '935px';
+			var ctrltext = document.getElementById(id1+'-ctrl');
+   var value = (document.getElementById(id1).style.display == 'none') ? 'block' : 'none';
+   if (document.getElementById(id0)) {document.getElementById(id0).style.width = w0;}
+			if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w1;}
+			if (document.getElementById(id0+'-sidebar2')) {document.getElementById(id0+'-sidebar2').style.width = w1;}
+   if (value == 'none')
+			{
+    ctrltext.value = 'show';
+			 if (document.getElementById(id2))
+    {
+					if (document.getElementById(id2).style.display == 'none')
+					{
+						if (document.getElementById(id0)) {document.getElementById(id0).style.width = w2;}
+						if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w2;}
+						if (document.getElementById(id0+'-sidebar2')) {document.getElementById(id0+'-sidebar2').style.width = w2;}
+					} else {
+						document.getElementById(id0).style.width = w1;
+						if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w1;}
+						if (document.getElementById(id0+'-sidebar2')) {document.getElementById(id0+'-sidebar2').style.width = w1;}
+					}
+				} else {
+					if (document.getElementById(id0)) {document.getElementById(id0).style.width = w2;}
+					if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w2;}
+					if (document.getElementById(id0+'-sidebar2')) {document.getElementById(id0+'-sidebar2').style.width = w2;}
+			 }
+   } else {
+    ctrltext.value = 'hide';
+			 if (document.getElementById(id2))
+    {
+					if (document.getElementById(id2).style.display == 'none')
+					{
+						if (document.getElementById(id0)) {document.getElementById(id0).style.width = w1;}
+						if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w1;}
+						if (document.getElementById(id0+'-sidebar2')) {document.getElementById(id0+'-sidebar2').style.width = w1;}
+					} else {
+						if (document.getElementById(id0)) {document.getElementById(id0).style.width = w0;}
+						if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w1;}
+						if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar2').style.width = w1;}
+					}
+				} else {
+					if (document.getElementById(id0)) {document.getElementById(id0).style.width = w1;}
+					if (document.getElementById(id0+'-sidebar1')) {document.getElementById(id0+'-sidebar1').style.width = w1;}
+					if (document.getElementById(id0+'-sidebar2')) {document.getElementById(id0+'-sidebar2').style.width = w1;}
+			 }
+			}
+	 	ixtSetSidebar( id1, value );
+   ixtSetCookie( id1, value );
+		}
+
+ function ixtSetSidebar( id, value )
+		{
+		 document.getElementById(id).style.display = value;
+		}
+
+ function ixtTrim( str )
+		{
+   return str.replace(/^\s+|\s+$/g, '') ;
+		}
+
+ function ixtGetCookie( name )
+  {
+			var cookieName = 'ixt_' + name;
+			var cookie = document.cookie;
+			var cookieList = cookie.split( ";" );
+			for( var idx in cookieList )
+				{
+					cookie = cookieList[idx].split( "=" );
+					if ( ixtTrim( cookie[0] ) == cookieName )
+						{
+							return( cookie[1] );
+						}
+				}
+		 return 'none';
+		}
+		
+	function ixtSetCookie( name, value )
+		{
+			var cookieName = 'ixt_' + name;
+			var expires = new Date();
+			expires.setTime( expires.getTime() + (365 * 24 * 60 * 60 * 1000));
+			document.cookie = cookieName + "=" + value + "; expires=" + expires + ";";
+  }
+/* end show/hide sidebar */
+</script>
+
+<div class="ixt-nav">
+ <{if $ixt_canvas_left or $ixt_canvas_right}>
+   <div class="ixt-ctrl0-left">
+    <span class="ixt-button-wrapper">
+     <span class="l"></span><span class="r"></span>
+     <input name="ixt-sidebar1-ctrl" id="ixt-sidebar1-ctrl" type="submit" class="ixt-button" onclick='ixtToggleSidebar(1);' value='hide' />
+    </span>
+   </div>
+ <{/if}>
+</div>
